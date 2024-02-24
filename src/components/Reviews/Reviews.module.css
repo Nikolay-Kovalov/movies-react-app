@@ -1,0 +1,46 @@
+.text {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.review {
+    font-size: 16px;
+    color: #333;
+    ;
+    margin-top: 12px;
+}
+
+.reviews_list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+.image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.wrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.title {
+
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}
+
+.item {
+    background-color: rgb(216, 216, 216);
+    /* border: 1px solid white; */
+    border-radius: 16px;
+    padding: 24px;
+}

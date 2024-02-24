@@ -1,0 +1,13 @@
+.sceleton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 408px;
+    height: 612px;
+    background-color: rgb(176, 176, 176);
+}
+
+.sceleton_text {
+    font-size: 32px;
+    color: #333;
+}
