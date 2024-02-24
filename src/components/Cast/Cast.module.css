@@ -1,0 +1,29 @@
+.text {
+    width: 360px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.cast_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.image {
+    width: 408px;
+    height: 612px;
+    margin: 0;
+
+
+}
+
+.title {
+
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}

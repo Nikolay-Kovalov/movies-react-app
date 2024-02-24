@@ -1,0 +1,43 @@
+.header {
+    padding: 24px 0;
+    padding-bottom: 12px;
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid red;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s linear;
+    padding-bottom: 4px;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s linear;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.active {
+    color: red;
+}
+
+.link.active.link:hover::after {
+    background-color: red;
+}

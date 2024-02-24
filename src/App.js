@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Layout from './components/Layout/Layout';
+import { lazy } from 'react';
+// import Cast from './components/Cast/Cast';
+// import Reviews from './components/Reviews/Reviews';
+
+
+
+const Home = lazy(() =>  import('./pages/Home'));
+const Movies = lazy(() =>  import('./pages/Movies') );
+const MovieDetails = lazy(() => import('./pages/MovieDetails'));
+const Cast = lazy(() => import('./components/Cast/Cast'));
+const Reviews = lazy(()=> import('./components/Reviews/Reviews'))
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home />}/>
+          <Route path='movies' element={<Movies />}/>
+          <Route path='movies/:movieId' element={<MovieDetails />}>
+            <Route path='cast' element={<Cast/>} />
+            <Route path='reviews' element={<Reviews/>} />
+          </Route>
+        </Route>
+     </Routes>
     </div>
   );
 }
